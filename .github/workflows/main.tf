@@ -1,3 +1,4 @@
+
 terraform {
 
   required_providers {
@@ -15,14 +16,14 @@ terraform {
 
   backend "remote" {
 
-    organization = "cloud-demos"
+    organization = "zmware"
 
 
 
 
     workspaces {
 
-      name = "az-pipeline1"
+      name = "PipelineAZ"
 
     }
   }
@@ -38,8 +39,8 @@ provider "azurerm" {
 #create azure container registry  
 
 resource "azurerm_container_registry" "acr" {
-  name                = "myfirstacrazpipeline4"
-  resource_group_name = "az-pipeline2"
+  name                = "myfirstacrazpipeline"
+  resource_group_name = "PipelineAZ"
   location            = "eastus"
   sku                 = "Premium"
   admin_enabled       = false
