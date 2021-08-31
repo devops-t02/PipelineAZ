@@ -38,7 +38,7 @@ provider "azurerm" {
 #create azure container registry  
 
 resource "azurerm_container_registry" "acr" {
-  name                = "myfirstacrazpipeline"
+  name                = "myfirstacrazpipeline88"
   resource_group_name = "PipelineAZ"
   location            = "eastus"
   sku                 = "Premium"
